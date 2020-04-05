@@ -1,0 +1,43 @@
+Animation rules for SwinGame (good documentation)
+- splash.txt
+- startup.txt
+Panel rules (minimal documentation)
+- FileDialogue.txt
+Swingame animation rules/text (minimal documentation)
+- FileDialogue.txt
+- splash.txt
+Fonts (no ducumentation)
+- arial.tff
+- cour.tff
+- ffaccess.tff
+- maven_pro_regular.tff
+
+Sprites:
+- Deploy Game Screen
+- highlight effect on ship seelect)
+- right+up button, right highlighted
+- right+up button, up highlighted
+- play button
+- random button
+- Play Game Screen
+- explsion animation
+- file selection pieces (x7)
+- loading bar (empty/full)
+- Menu Screen
+- Ships 1-5, horizontal + vertical (x10)
+- splash animation
+- loading screen
+- swinburne logo
+- swingame animation
+- swingame text animation
+
+Sounds:
+- error
+- hit
+- horrordrone (music)
+- lose
+- sink
+- SwinGameStart.ogg (redundant?)
+- SwinGameStart
+- watershot
+- winner
