@@ -1,4 +1,3 @@
-Imports SwinGameSDK
 Module GameLogic
     Public Sub Main()
         'Opens a new Graphics Window

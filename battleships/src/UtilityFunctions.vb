@@ -1,4 +1,3 @@
-Imports SwinGameSDK
 ''' <summary>
 ''' This includes a number of utility methods for
 ''' drawing and interacting with the Mouse.
