@@ -1,0 +1,4 @@
+G:\Uni\DP1\Battleships\battleships\obj\x86\Debug\Battleships.csprojAssemblyReference.cache
+G:\Uni\DP1\Battleships\battleships\obj\x86\Debug\Battleships.csproj.CoreCompileInputs.cache
+G:\Uni\DP1\Battleships\battleships\obj\x86\Debug\Battleships.exe
+G:\Uni\DP1\Battleships\battleships\obj\x86\Debug\Battleships.pdb
