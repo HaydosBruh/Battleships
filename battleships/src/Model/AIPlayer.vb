@@ -1,4 +1,3 @@
-Imports SwinGameSDK
 ''' <summary>
 ''' The AIPlayer is a type of player. It can readomly deploy ships, it also has the
 ''' functionality to generate coordinates and shoot at tiles
