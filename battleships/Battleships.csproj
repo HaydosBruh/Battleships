@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{1535291D-B13D-4CC6-BDB7-A48785F2224E}</ProjectGuid>
+    <ProjectGuid>{A711A876-7D65-0337-3FEF-6EF9E76516EE}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <StartupObject>
     </StartupObject>
@@ -14,6 +14,8 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,6 +48,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="SwinGame, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>lib\SwinGame.dll</HintPath>
@@ -166,38 +169,41 @@
     <Content Include="Resources\SwinGame.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="src\DeploymentController.vb" />
-    <Compile Include="src\DiscoveryController.vb" />
-    <Compile Include="src\EndingGameController.vb" />
-    <Compile Include="src\GameController.vb" />
-    <Compile Include="src\GameLogic.vb" />
-    <Compile Include="src\GameResources.vb" />
-    <Compile Include="src\GameState.vb" />
-    <Compile Include="src\HighScoreController.vb" />
-    <Compile Include="src\MenuController.vb" />
-    <Compile Include="src\Model\AIHardPlayer.vb" />
-    <Compile Include="src\Model\AIMediumPlayer.vb" />
-    <Compile Include="src\Model\AIOption.vb" />
-    <Compile Include="src\Model\AIPlayer.vb" />
-    <Compile Include="src\Model\AttackResult.vb" />
-    <Compile Include="src\Model\BattleShipsGame.vb" />
-    <Compile Include="src\Model\Direction.vb" />
-    <Compile Include="src\Model\ISeaGrid.vb" />
-    <Compile Include="src\Model\Player.vb" />
-    <Compile Include="src\Model\ResultOfAttack.vb" />
-    <Compile Include="src\Model\SeaGrid.vb" />
-    <Compile Include="src\Model\SeaGridAdapter.vb" />
-    <Compile Include="src\Model\Ship.vb" />
-    <Compile Include="src\Model\ShipName.vb" />
-    <Compile Include="src\Model\Tile.vb" />
-    <Compile Include="src\Model\TileView.vb" />
-    <Compile Include="src\UtilityFunctions.vb" />
+    <Compile Include="My Project\MyNamespace.Static.1.Designer.cs" />
+    <Compile Include="My Project\MyNamespace.Static.2.Designer.cs" />
+    <Compile Include="My Project\MyNamespace.Static.3.Designer.cs" />
+    <Compile Include="src\DeploymentController.cs" />
+    <Compile Include="src\DiscoveryController.cs" />
+    <Compile Include="src\EndingGameController.cs" />
+    <Compile Include="src\GameController.cs" />
+    <Compile Include="src\GameLogic.cs" />
+    <Compile Include="src\GameResources.cs" />
+    <Compile Include="src\GameState.cs" />
+    <Compile Include="src\HighScoreController.cs" />
+    <Compile Include="src\MenuController.cs" />
+    <Compile Include="src\Model\AIHardPlayer.cs" />
+    <Compile Include="src\Model\AIMediumPlayer.cs" />
+    <Compile Include="src\Model\AIOption.cs" />
+    <Compile Include="src\Model\AIPlayer.cs" />
+    <Compile Include="src\Model\AttackResult.cs" />
+    <Compile Include="src\Model\BattleShipsGame.cs" />
+    <Compile Include="src\Model\Direction.cs" />
+    <Compile Include="src\Model\ISeaGrid.cs" />
+    <Compile Include="src\Model\Player.cs" />
+    <Compile Include="src\Model\ResultOfAttack.cs" />
+    <Compile Include="src\Model\SeaGrid.cs" />
+    <Compile Include="src\Model\SeaGridAdapter.cs" />
+    <Compile Include="src\Model\Ship.cs" />
+    <Compile Include="src\Model\ShipName.cs" />
+    <Compile Include="src\Model\Tile.cs" />
+    <Compile Include="src\Model\TileView.cs" />
+    <Compile Include="src\UtilityFunctions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="My Project\" />
     <Folder Include="tmp\" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.Targets" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio AllowExistingFolder="true" />
   </ProjectExtensions>
