@@ -15,7 +15,7 @@ namespace Battleships2
     {
         private const int _WIDTH = 10;
         private const int _HEIGHT = 10;
-        private Tile[,] _GameTiles = new Tile[Width, Height];
+        private Tile[,] _GameTiles = new Tile[_WIDTH, _HEIGHT];
         private Dictionary<ShipName, Ship> _Ships;
         private int _ShipsKilled = 0;
 
@@ -73,8 +73,8 @@ namespace Battleships2
         }
 
         /// <summary>
-    /// AllDeployed checks if all the ships are deployed
-    /// </summary>
+        /// AllDeployed checks if all the ships are deployed
+        /// </summary>
         public bool AllDeployed
         {
             get
@@ -92,8 +92,8 @@ namespace Battleships2
         }
 
         /// <summary>
-    /// SeaGrid constructor, a seagrid has a number of tiles stored in an array
-    /// </summary>
+        /// SeaGrid constructor, a seagrid has a number of tiles stored in an array
+        /// </summary>
         public SeaGrid(Dictionary<ShipName, Ship> ships)
         {
             // fill array with empty Tiles

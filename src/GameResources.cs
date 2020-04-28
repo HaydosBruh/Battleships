@@ -246,28 +246,24 @@ namespace Battleships2
 
         private static void FreeFonts()
         {
-            Font obj;
             foreach (var obj in _Fonts.Values)
                 SwinGame.FreeFont(obj);
         }
 
         private static void FreeImages()
         {
-            Bitmap obj;
             foreach (var obj in _Images.Values)
                 SwinGame.FreeBitmap(obj);
         }
 
         private static void FreeSounds()
         {
-            SoundEffect obj;
             foreach (var obj in _Sounds.Values)
                 Audio.FreeSoundEffect(obj);
         }
 
         private static void FreeMusic()
         {
-            Music obj;
             foreach (var obj in _Music.Values)
                 Audio.FreeMusic(obj);
         }

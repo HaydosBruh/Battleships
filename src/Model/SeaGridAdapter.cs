@@ -51,8 +51,8 @@ namespace Battleships2
         }
 
         /// <summary>
-    /// Indicates that the grid has been changed
-    /// </summary>
+        /// Indicates that the grid has been changed
+        /// </summary>
         public event EventHandler Changed;
 
         /// <summary>

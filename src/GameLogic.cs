@@ -11,7 +11,8 @@ namespace Battleships2
 
             // Load Resources
             GameResources.LoadResources();
-            SwinGame.PlayMusic(GameResources.GameMusic("Background"));
+            //***HERE*** I commented this line \/ out because the music is annoying.
+            //SwinGame.PlayMusic(GameResources.GameMusic("Background"));
 
             // Game Loop
             do

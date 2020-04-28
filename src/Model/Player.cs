@@ -11,7 +11,7 @@ namespace Battleships2
     public class Player : IEnumerable<Ship>
     {
         protected static Random _Random = new Random();
-        private Dictionary<ShipName, Ship> _Ships = new Dictionary<ShipName, Ship>();
+        private static Dictionary<ShipName, Ship> _Ships = new Dictionary<ShipName, Ship>();
         private SeaGrid _playerGrid = new SeaGrid(_Ships);
         private ISeaGrid _enemyGrid;
         protected BattleShipsGame _game;
@@ -56,10 +56,7 @@ namespace Battleships2
             // for each ship add the ships name so the seagrid knows about them
             foreach (ShipName name in Enum.GetValues(typeof(ShipName)))
             {
-                if (name != ShipName.None)
-                {
-                    _Ships.Add(name, new Ship(name));
-                }
+                _Ships[name] = new Ship(name);
             }
 
             RandomizeDeployment();
@@ -180,7 +177,7 @@ namespace Battleships2
     /// has.
     /// </summary>
     /// <returns>A Ship enumerator</returns>
-        public IEnumerator<Ship> GetShipEnumerator()
+        IEnumerator<Ship> IEnumerable<Ship>.GetEnumerator()
         {
             var result = new Ship[_Ships.Values.Count + 1];
             _Ships.Values.CopyTo(result, 0);
@@ -190,11 +187,11 @@ namespace Battleships2
         }
 
         /// <summary>
-    /// Makes it possible to enumerate over the ships the player
-    /// has.
-    /// </summary>
-    /// <returns>A Ship enumerator</returns>
-        public IEnumerator GetEnumerator()
+        /// Makes it possible to enumerate over the ships the player
+        /// has.
+        /// </summary>
+        /// <returns>A Ship enumerator</returns>
+        IEnumerator IEnumerable.GetEnumerator()
         {
             var result = new Ship[_Ships.Values.Count + 1];
             _Ships.Values.CopyTo(result, 0);
