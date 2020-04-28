@@ -1,0 +1,11 @@
+G:\Uni\DP1\BS v2\battleships\obj\x86\Debug\Battleships2.vbprojAssemblyReference.cache
+G:\Uni\DP1\BS v2\battleships\obj\x86\Debug\Battleships2.vbproj.CoreCompileInputs.cache
+G:\Uni\DP1\BS v2\battleships\obj\x86\Debug\Battleships2.Resources.resources
+G:\Uni\DP1\BS v2\battleships\obj\x86\Debug\Battleships2.vbproj.GenerateResource.cache
+G:\Uni\DP1\BS v2\battleships\bin\Debug\lib\SwinGame.dll.mdb
+G:\Uni\DP1\BS v2\battleships\bin\Debug\ConsoleApplication.exe
+G:\Uni\DP1\BS v2\battleships\bin\Debug\ConsoleApplication.pdb
+G:\Uni\DP1\BS v2\battleships\bin\Debug\SwinGame.dll
+G:\Uni\DP1\BS v2\battleships\obj\x86\Debug\Battleships2.vbproj.CopyComplete
+G:\Uni\DP1\BS v2\battleships\obj\x86\Debug\ConsoleApplication.exe
+G:\Uni\DP1\BS v2\battleships\obj\x86\Debug\ConsoleApplication.pdb
