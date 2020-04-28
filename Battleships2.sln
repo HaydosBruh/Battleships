@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1062
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Battleships2", "Battleships2.csproj", "{103D8202-A89C-043A-3860-9577F6F1A1E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{103D8202-A89C-043A-3860-9577F6F1A1E7}.Debug|x86.ActiveCfg = Debug|x86
+		{103D8202-A89C-043A-3860-9577F6F1A1E7}.Debug|x86.Build.0 = Debug|x86
+		{103D8202-A89C-043A-3860-9577F6F1A1E7}.Release|x86.ActiveCfg = Release|x86
+		{103D8202-A89C-043A-3860-9577F6F1A1E7}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B35C369-B33B-42A2-BA55-6DF3FDEAA306}
+	EndGlobalSection
+EndGlobal
