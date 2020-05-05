@@ -421,6 +421,12 @@ namespace Battleships2
                         HighScoreController.DrawHighScores();
                         break;
                     }
+
+                case GameState.ViewingMusic:
+                    {
+                        MenuController.DrawMusic();
+                        break;
+                    }
             }
 
             UtilityFunctions.DrawAnimations();
@@ -469,14 +475,14 @@ namespace Battleships2
         {
             switch (state)
             {
-                case false:
+                case true:
                     {
                         SwinGame.PlayMusic(GameResources.GameMusic("Background"));
                         break;
                     }
-                case true:
+                case false:
                     {
-                        SwinGame.PlayMusic(GameResources.GameMusic(""));
+                        SwinGame.StopMusic();
                         break;
                     }
             }
