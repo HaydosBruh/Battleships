@@ -358,6 +358,11 @@ namespace Battleships2
                         HighScoreController.HandleHighScoreInput();
                         break;
                     }
+                case GameState.ViewingMusic:
+                    {
+                        MenuController.HandleMusicMenuInput();
+                        break;
+                    }
             }
 
             UtilityFunctions.UpdateAnimations();
@@ -458,6 +463,23 @@ namespace Battleships2
         public static void SetDifficulty(AIOption setting)
         {
             _aiSetting = setting;
+        }
+
+        public static void PlayMusic(bool state)
+        {
+            switch (state)
+            {
+                case false:
+                    {
+                        SwinGame.PlayMusic(GameResources.GameMusic("Background"));
+                        break;
+                    }
+                case true:
+                    {
+                        SwinGame.PlayMusic(GameResources.GameMusic(""));
+                        break;
+                    }
+            }
         }
     }
 }

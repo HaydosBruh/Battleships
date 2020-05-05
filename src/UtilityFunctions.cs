@@ -248,6 +248,7 @@ namespace Battleships2
                 case GameState.ViewingMainMenu:
                 case GameState.ViewingGameMenu:
                 case GameState.AlteringSettings:
+                case GameState.ViewingMusic:
                 case GameState.ViewingHighScores:
                     {
                         SwinGame.DrawBitmap(GameResources.GameImage("Menu"), 0, 0);

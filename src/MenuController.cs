@@ -18,7 +18,7 @@ namespace Battleships2
     /// <remarks>
     /// These are the text captions for the menu items.
     /// </remarks>
-        private readonly static string[][] _menuStructure = new[] { new string[] { "PLAY", "SETUP", "SCORES", "QUIT" }, new string[] { "RETURN", "SURRENDER", "QUIT" }, new string[] { "EASY", "MEDIUM", "HARD" } };
+        private readonly static string[][] _menuStructure = new[] { new string[] { "PLAY", "SETUP", "SCORES", "QUIT", "MUSIC" }, new string[] { "RETURN", "SURRENDER", "QUIT" }, new string[] { "EASY", "MEDIUM", "HARD" }, new string[] { "ON", "OFF" } };
 
 
         private const int MENU_TOP = 575;
@@ -31,10 +31,12 @@ namespace Battleships2
         private const int MAIN_MENU = 0;
         private const int GAME_MENU = 1;
         private const int SETUP_MENU = 2;
+        private const int MUSIC_MENU = 3;
         private const int MAIN_MENU_PLAY_BUTTON = 0;
         private const int MAIN_MENU_SETUP_BUTTON = 1;
         private const int MAIN_MENU_TOP_SCORES_BUTTON = 2;
         private const int MAIN_MENU_QUIT_BUTTON = 3;
+        private const int MAIN_MENU_MUSIC_BUTTON = 4;
         private const int SETUP_MENU_EASY_BUTTON = 0;
         private const int SETUP_MENU_MEDIUM_BUTTON = 1;
         private const int SETUP_MENU_HARD_BUTTON = 2;
@@ -42,6 +44,8 @@ namespace Battleships2
         private const int GAME_MENU_RETURN_BUTTON = 0;
         private const int GAME_MENU_SURRENDER_BUTTON = 1;
         private const int GAME_MENU_QUIT_BUTTON = 2;
+        private const int MUSIC_MENU_ON = 0;
+        private const int MUSIC_MENU_OFF = 1;
         private readonly static Color MENU_COLOR = SwinGame.RGBAColor(2, 167, 252, 255);
         private readonly static Color HIGHLIGHT_COLOR = SwinGame.RGBAColor(1, 57, 86, 255);
 
@@ -75,6 +79,16 @@ namespace Battleships2
         public static void HandleGameMenuInput()
         {
             HandleMenuInput(GAME_MENU, 0, 0);
+        }
+
+        public static void HandleMusicMenuInput()
+        {
+            bool handled;
+            handled = HandleMenuInput(MUSIC_MENU, 1, 1);
+            if (!handled)
+            {
+                HandleMenuInput(MAIN_MENU, 0, 0);
+            }
         }
 
         /// <summary>
@@ -151,6 +165,12 @@ namespace Battleships2
 
             DrawButtons(MAIN_MENU);
             DrawButtons(SETUP_MENU, 1, 1);
+        }
+
+        public static void DrawMusic()
+        {
+            DrawButtons(MAIN_MENU);
+            DrawButtons(MUSIC_MENU, 1, 1);
         }
 
         /// <summary>
@@ -247,6 +267,11 @@ namespace Battleships2
                         PerformGameMenuAction(button);
                         break;
                     }
+                case MUSIC_MENU:
+                    {
+                        PerformSoundMenuAction(button);
+                        break;
+                    }
             }
         }
 
@@ -279,6 +304,12 @@ namespace Battleships2
                 case MAIN_MENU_QUIT_BUTTON:
                     {
                         GameController.EndCurrentState();
+                        break;
+                    }
+
+                case MAIN_MENU_MUSIC_BUTTON:
+                    {
+                        GameController.AddNewState(GameState.ViewingMusic);
                         break;
                     }
             }
@@ -342,5 +373,29 @@ namespace Battleships2
                     }
             }
         }
+
+        private static void PerformSoundMenuAction(int button)
+        {
+            switch (button)
+            {
+                case MUSIC_MENU_OFF:
+                    {
+                        GameController.PlayMusic(false);
+                        break;
+                    }
+
+                case MUSIC_MENU_ON:
+                    {
+                        GameController.PlayMusic(true);
+                        break;
+                    }
+            }
+                GameController.EndCurrentState();
+        }
+
+
+
+
+
     }
 }
