@@ -56,6 +56,8 @@ namespace Battleships2
             // for each ship add the ships name so the seagrid knows about them
             foreach (ShipName name in Enum.GetValues(typeof(ShipName)))
             {
+                if (name == ShipName.None)
+                    continue;
                 _Ships[name] = new Ship(name);
             }
 
