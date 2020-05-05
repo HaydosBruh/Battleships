@@ -9,3 +9,13 @@ G:\Uni\DP1\Battleships\bin\Debug\ConsoleApplication.exe
 G:\Uni\DP1\Battleships\bin\Debug\ConsoleApplication.pdb
 G:\Uni\DP1\Battleships\bin\Debug\SwinGame.dll
 G:\Uni\DP1\Battleships\obj\x86\Debug\Battleships2.csproj.CopyComplete
+C:\Users\Hayden\Desktop\Battleships-master\Battleships\bin\Debug\lib\SwinGame.dll.mdb
+C:\Users\Hayden\Desktop\Battleships-master\Battleships\bin\Debug\ConsoleApplication.exe
+C:\Users\Hayden\Desktop\Battleships-master\Battleships\bin\Debug\ConsoleApplication.pdb
+C:\Users\Hayden\Desktop\Battleships-master\Battleships\bin\Debug\SwinGame.dll
+C:\Users\Hayden\Desktop\Battleships-master\Battleships\obj\x86\Debug\Battleships2.csprojResolveAssemblyReference.cache
+C:\Users\Hayden\Desktop\Battleships-master\Battleships\obj\x86\Debug\Battleships2.Resources.resources
+C:\Users\Hayden\Desktop\Battleships-master\Battleships\obj\x86\Debug\Battleships2.csproj.GenerateResource.Cache
+C:\Users\Hayden\Desktop\Battleships-master\Battleships\obj\x86\Debug\Battleships2.csproj.CoreCompileInputs.cache
+C:\Users\Hayden\Desktop\Battleships-master\Battleships\obj\x86\Debug\ConsoleApplication.exe
+C:\Users\Hayden\Desktop\Battleships-master\Battleships\obj\x86\Debug\ConsoleApplication.pdb
