@@ -47,6 +47,8 @@ namespace Battleships2
         /// <summary>
     /// The player has quit. Show ending credits and terminate the game
     /// </summary>
-        Quitting
+        Quitting,
+
+        ViewingMusic
     }
 }
