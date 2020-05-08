@@ -229,6 +229,36 @@ namespace Battleships2
             }
         }
 
+        public static void DrawDestroyedShips(Player thePlayer)
+        {
+            int rowTop;
+            int colLeft;
+            int shipHeight, shipWidth;
+            string shipName;
+            foreach (Ship s in thePlayer)
+            {
+                if (s is null || !s.IsDestroyed)
+                    continue;
+                rowTop = FIELD_TOP + (CELL_GAP + CELL_HEIGHT) * s.Row + SHIP_GAP;
+                colLeft = FIELD_LEFT + (CELL_GAP + CELL_WIDTH) * s.Column + SHIP_GAP;
+                if (s.Direction == Direction.LeftRight)
+                {
+                    shipName = "ShipLR" + s.Size;
+                    shipHeight = CELL_HEIGHT - SHIP_GAP * 2;
+                    shipWidth = (CELL_WIDTH + CELL_GAP) * s.Size - SHIP_GAP * 2 - CELL_GAP;
+                }
+                else
+                {
+                    // Up down
+                    shipName = "ShipUD" + s.Size;
+                    shipHeight = (CELL_HEIGHT + CELL_GAP) * s.Size - SHIP_GAP * 2 - CELL_GAP;
+                    shipWidth = CELL_WIDTH - SHIP_GAP * 2;
+                }
+
+                SwinGame.DrawBitmap(GameResources.GameImage(shipName), colLeft, rowTop);
+            }
+        }
+
         /// <summary>
     /// Draws the message to the screen
     /// </summary>

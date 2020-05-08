@@ -69,6 +69,8 @@ namespace Battleships2
                 UtilityFunctions.DrawField(GameController.HumanPlayer.EnemyGrid, GameController.ComputerPlayer, false);
             }
 
+            //UtilityFunctions.DrawDestroyedShips(GameController.HumanPlayer);
+            UtilityFunctions.DrawDestroyedShips(GameController.ComputerPlayer);
             UtilityFunctions.DrawSmallField(GameController.HumanPlayer.PlayerGrid, GameController.HumanPlayer);
             UtilityFunctions.DrawMessage();
             SwinGame.DrawText(GameController.HumanPlayer.Shots.ToString(), Color.White, GameResources.GameFont("Menu"), SCORES_LEFT, SHOTS_TOP);

@@ -11,8 +11,8 @@ namespace Battleships2
     public class Player : IEnumerable<Ship>
     {
         protected static Random _Random = new Random();
-        private static Dictionary<ShipName, Ship> _Ships = new Dictionary<ShipName, Ship>();
-        private SeaGrid _playerGrid = new SeaGrid(_Ships);
+        private Dictionary<ShipName, Ship> _Ships = new Dictionary<ShipName, Ship>();
+        private SeaGrid _playerGrid;
         private ISeaGrid _enemyGrid;
         protected BattleShipsGame _game;
         private int _shots;
@@ -52,7 +52,7 @@ namespace Battleships2
         public Player(BattleShipsGame controller)
         {
             _game = controller;
-
+            _playerGrid = new SeaGrid(_Ships);
             // for each ship add the ships name so the seagrid knows about them
             foreach (ShipName name in Enum.GetValues(typeof(ShipName)))
             {
