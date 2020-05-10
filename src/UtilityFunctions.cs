@@ -426,15 +426,15 @@ namespace Battleships2
             // Draw the grid
             for (int row = 0; row <= 9; row++)
             {
-                rowTop = FIELD_TOP + (CELL_GAP + CELL_HEIGHT) * row;
+                rowTop = FIELD_TOP + (CELL_HEIGHT / 2) + (CELL_GAP + CELL_HEIGHT) * row;
 
-                SwinGame.DrawText(row.ToString(), Color.White, GameResources.GameFont("Menu"), FIELD_LEFT, rowTop);
+                SwinGame.DrawText((row + 1).ToString(), Color.White, GameResources.GameFont("Menu"), FIELD_LEFT - 15, rowTop);
             }
             for (int col = 0; col <= 9; col++)
             {
-                colLeft = FIELD_LEFT + (CELL_GAP + CELL_WIDTH) * col;
+                colLeft = FIELD_LEFT + (CELL_WIDTH / 2) + (CELL_GAP + CELL_WIDTH) * col;
                 char c = (char)(col + 65);
-                SwinGame.DrawText(c.ToString(), Color.White, GameResources.GameFont("Menu"), colLeft, FIELD_TOP);
+                SwinGame.DrawText(c.ToString(), Color.White, GameResources.GameFont("Menu"), colLeft, FIELD_TOP - 15);
 
             }
 
