@@ -378,6 +378,9 @@ namespace Battleships2
             int shipHeight, shipWidth;
             foreach (Ship s in thePlayer)
             {
+                if (s is null)
+                    continue;
+
                 if (selectedShip == ShipName.Tug && s.Size != 1)
                 {
                     continue;

@@ -132,6 +132,7 @@ namespace Battleships2
         public static void DrawDeployment()
         {
             UtilityFunctions.DrawField(GameController.HumanPlayer.PlayerGrid, GameController.HumanPlayer, true);
+            UtilityFunctions.SelectedShip(GameController.HumanPlayer, _selectedShip);
 
             // Draw the Left/Right and Up/Down buttons
             if (_currentDirection == Direction.LeftRight)
