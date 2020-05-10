@@ -369,5 +369,51 @@ namespace Battleships2
                 GameController.DrawScreen();
             }
         }
+
+        public static void SelectedShip(Player thePlayer, ShipName selectedShip)
+        {
+
+            int rowTop;
+            int colLeft;
+            int shipHeight, shipWidth;
+            foreach (Ship s in thePlayer)
+            {
+                if (selectedShip == ShipName.Tug && s.Size != 1)
+                {
+                    continue;
+                }
+                else if (selectedShip == ShipName.Submarine && s.Size != 2)
+                {
+                    continue; 
+                }
+                else if (selectedShip == ShipName.Destroyer && s.Size != 3)
+                {
+                    continue;
+                }
+                else if (selectedShip == ShipName.Battleship && s.Size != 4)
+                {
+                    continue;
+                }
+                else if (selectedShip == ShipName.AircraftCarrier && s.Size != 5)
+                {
+                    continue;
+                }
+
+                rowTop = FIELD_TOP + (CELL_GAP + CELL_HEIGHT) * s.Row + SHIP_GAP;
+                colLeft = FIELD_LEFT + (CELL_GAP + CELL_WIDTH) * s.Column + SHIP_GAP;
+                if (s.Direction == Direction.LeftRight)
+                {
+                    shipHeight = CELL_HEIGHT - SHIP_GAP * 2;
+                    shipWidth = (CELL_WIDTH + CELL_GAP) * s.Size - SHIP_GAP * 2 - CELL_GAP;
+                }
+                else
+                {
+                    shipHeight = (CELL_HEIGHT + CELL_GAP) * s.Size - SHIP_GAP * 2 - CELL_GAP;
+                    shipWidth = CELL_WIDTH - SHIP_GAP * 2;
+                }
+
+                SwinGame.DrawRectangle(SHIP_OUTLINE_COLOR, colLeft, rowTop, shipWidth, shipHeight);
+            }
+        }
     }
 }
